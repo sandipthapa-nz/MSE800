@@ -25,3 +25,34 @@ isCritical= bugSeverity >= 4
 over8Hours= estimatedTimeToFix > 8
 over1kCost= totalCost > 1000
 isUrgent = isCritical and isReproducible
+
+# Output in f-string format
+report = f"""
+{'=' * 55}
+{'SOFTWARE BUG TRACKING REPORT':^55}
+{'=' * 55}
+Project Name      : {projectName}
+Bug ID            : {bugID}
+Description       : {bugDescription}
+Severity Score    : {bugSeverity} / 5
+Reproducible      : {isReproducible}
+{'-' * 55}
+TIME & COST BREAKDOWN
+{'-' * 55}
+Hourly Rate       : ${hourlyRate:,.2f}/hr
+Fixing Time       : {estimatedTimeToFix:.2f} hrs
+Testing Time (25%): {testingTime:.2f} hrs
+Total Dev Time    : {totalDevTime:.2f} hrs
+Fixing Cost       : ${estimatedCFixingCost:,.2f}
+Total Est. Cost   : ${totalCost:,.2f}
+{'-' * 55}
+STATUS & PRIORITY FLAGS
+{'-' * 55}
+Critical Bug                 : {isCritical}
+Requires > 8 Fixing Hours    : {over8Hours}
+Total Cost Exceeds $1,000    : {over1kCost}
+Urgent Attention Required    : {isUrgent}
+{'=' * 55}
+"""
+
+print(report)
