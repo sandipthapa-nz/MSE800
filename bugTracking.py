@@ -19,3 +19,9 @@ testingTime= estimatedTimeToFix * (25/100)
 # calcultae the total development time and cost
 totalDevTime= estimatedTimeToFix + testingTime
 totalCost= totalDevTime * hourlyRate
+
+# Comparisons
+isCritical= bugSeverity >= 4
+over8Hours= estimatedTimeToFix > 8
+over1kCost= totalCost > 1000
+isUrgent = isCritical and isReproducible
