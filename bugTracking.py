@@ -6,3 +6,6 @@ bugSeverity=int(input("Enter the bug severity score (1-5): "))
 estimatedTimeToFix=float(input("Enter the estimated hours to fix the bug: "))
 hourlyRate=float(input("Enter the hourly rate for fixing the bug: "))
 isReproducible=input("Is the bug reproducible? (yes/no): ")
+
+# convert the reproducibility input to a boolean value
+isReproducible= isReproducible.lower() == "yes"
