@@ -29,7 +29,7 @@ isUrgent = isCritical and isReproducible
 # Output in f-string format
 report = f"""
 {'=' * 55}
-{'SOFTWARE BUG TRACKING REPORT':^55}
+{'BUG TRACKING REPORT':^55}
 {'=' * 55}
 Project Name      : {projectName}
 Bug ID            : {bugID}
